@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="doReady()">
+    <img id="nobita" src="https://nhakhoagiadinh.com.vn/hinh-anh-cua-nobita/imager_3_78977_700.jpg" style="position: relative; top: 0px; left: 0px;" width="160px" height="200px">
+</body>
+<script>
+    function goUp() {
+        let imgNobita = document.getElementById('nobita');
+        console.log(imgNobita.style.top) 
+        imgNobita.style.top = parseInt(imgNobita.style.top) - 10 + 'px';
+    }
+    function goDown() {
+        var imgNobita = document.getElementById('nobita');
+        imgNobita.style.top = parseInt(imgNobita.style.top) + 10 + 'px';
+    }
+    function goLeft() {
+        var imgNobita = document.getElementById('nobita');
+        imgNobita.style.left = parseInt(imgNobita.style.left) - 10 + 'px'; 
+    }
+    function goRight() {
+        var imgNobita = document.getElementById('nobita');
+        imgNobita.style.left = parseInt(imgNobita.style.left) + 10 + 'px';
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                goLeft();
+                break;
+            case 39:
+                goRight();
+                break;
+            case 38:
+                goUp();
+                break;
+            case 40:
+                goDown();
+                break;
+        }
+    }
+    function doReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</html>
