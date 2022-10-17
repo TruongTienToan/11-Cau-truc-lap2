@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Tính chỉ số cân nặng</h1>
+        <label for="can_nang">Nhập cân nặng: (kg)</label>
+        <input type="text" id="can_nang">
+        <br>
+        <br>
+        <label for="chieu_cao">Nhập chiều cao: (m)</label> 
+        <input type="text" id="chieu_cao">
+        <br>
+        <br>
+        <button onclick="kiemtra()">Kiểm tra</button>
+
+        <p id="result"></p>
+        <script>
+            function kiemtra() {
+                let can_nang = document.getElementById("can_nang").value
+                let chieu_cao = document.getElementById("chieu_cao").value
+                let bmi = can_nang / ( Math.pow(chieu_cao, 2) )
+                let result = "";
+
+                if(bmi < 16) {
+                    result = "Gầy. Ăn thật nhiều vào nhé" + "<img src = 'https://media0.giphy.com/media/iDyachNjoN4Uns6gIH/200.webp?cid=ecf05e47t33epgk1vj73ab4v8aonv67zfvr0q7kas5tydl3u&rid=200.webp&ct=g' width='100' height= '100'>";
+                } else if (bmi < 25) {
+                    result = "Bình thường" + "<img src = 'https://media3.giphy.com/media/tIeCLkB8geYtW/200.webp?cid=ecf05e47nfwwd5ys4o1rilk6wt79a0d0ah4xcrvtd827y94r&rid=200.webp&ct=g' width='100' height= '100'>";
+                } else if (bmi < 30) {
+                    result = "Thừa cân" + "<img src = 'https://media4.giphy.com/media/h5p2Cp7irO5BGjgrru/200w.webp?cid=ecf05e47w2cxk95djqbjzqk7nyz4v5oygevb629zgkuc1p24&rid=200w.webp&ct=g' width='100' height= '100'>";
+                } else {
+                    result = "Béo phì :((" + "<img src = 'https://media1.giphy.com/media/zzALYeLqMLDa6PEV2C/200w.webp?cid=ecf05e473ho9slk686bqtcyd1ta1yp2fkwp1njjc7cuxv51e&rid=200w.webp&ct=g' width='100' height= '100'>";
+                }
+                document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + "Bạn" + "<b>" + result + "</b>";
+            }
+        </script>
+</body>
+</html>
