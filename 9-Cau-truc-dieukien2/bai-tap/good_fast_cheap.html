@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="good_fast_cheap.css">
+</head>
+
+<body>
+    <table style="border-spacing: 5px">
+        <tr>
+          <td>
+            <h2>Good</h2>
+          </td>
+          <td>
+            <label class="switch">
+              <input id ="good" type="checkbox" onclick="CheckGood()">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>
+            <h2>Fast</h2>
+          </td>
+          <td>
+            <label class="switch">
+              <input id ="fast" type="checkbox" onclick="CheckFast()">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>
+            <h2>Cheap</h2>
+          </td>
+          <td>
+            <label class="switch">
+              <input id ="cheap" type="checkbox" onclick="CheckCheap()">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+      </table>
+</body>
+    <script>
+        let good = document.getElementById('good');
+        let fast = document.getElementById('fast');
+        let cheap = document.getElementById('cheap');
+        good.checked = false;
+        fast.checked = false;
+        cheap.checked = false;
+
+        function CheckGood() {
+            if (fast.checked && cheap.checked) {
+                cheap.checked = false;
+            }
+        }
+
+        function CheckFast() {
+            if (cheap.checked && good.checked) {
+                good.checked = false;
+            }
+        }
+        function CheckCheap() {
+            if (good.checked && fast.checked) {
+                fast.checked = false;
+            }
+        }
+    </script>
+</html>
