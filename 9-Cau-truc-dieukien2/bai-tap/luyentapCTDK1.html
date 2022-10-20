@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+
+<body>
+    <!-- Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không <br>
+    <script>
+        let a = prompt('Nhập số a:');
+        let b = prompt('Nhập số b:');
+        if(a % b == 0){
+            alert("a chia hết cho b") 
+        } else {
+            alert("a không chia hết cho b") 
+        }
+    </script> -->
+    <!-- Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10 <br>
+    <script>
+        let age = prompt('Nhập tuổi học sinh:');
+        if(age < 15) {
+            alert("Học sinh này không đủ điều kiện vào học lớp 10");
+        } else {
+            alert("Học sinh này đủ điều kiện vào lớp 10");
+        }
+    </script> -->
+    <!-- Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0 <br>
+    <script>
+        let number = prompt("Nhập vào một số nguyên bất kì:");
+        if(number > 0) {
+            document.write(number + " lớn hơn 0")
+        } else if(number < 0) {
+            document.write(number + " nhỏ hơn 0")
+        } else {
+            document.write(number + " bằng 0")
+        }
+    </script> -->
+    <!-- Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+    <script>
+        let a = prompt("Nhập số a:");
+        let b = prompt("Nhập số b:");
+        let c = prompt("Nhập số c:");
+        if(a > b && a > c) {
+            document.write(a + " là số lớn nhất") 
+        } else if (b > c && b > a) {
+            document.write(b + " là số lớn nhất")
+        } else {
+            document.write(c + " là số lớn nhất")
+        }
+    </script> -->
+    <!-- Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    <script>
+            let giuaky, cuoiky;
+            giuaky = prompt("Nhập vào điểm thi giữa kì:");
+            cuoiky = prompt("Nhập vào điểm thi cuối kì:");
+            let TBC = ((giuaky * 2) + (cuoiky * 3)) / 5;
+            console.log(TBC);
+            if (TBC >= 8 && TBC <=10) {
+                alert("Học sinh đạt học lực giỏi");
+            } else if (8 > TBC && TBC >= 6.5) {
+                alert("Học sinh đạt học lực khá");
+            } else if (6.5 > TBC && TBC >= 5) {
+                alert("Học sinh đạt học lực trung bình");
+            } else if (TBC < 5) {
+                alert("Học sinh đạt học lực yếu");
+            }
+    </script> -->
+    <!-- Bài 6: Tính hoa hồng nhận được tùy theo mức doanh số bán hàng
+    <script>
+        let doanhSo, hoaHong;
+        doanhSo = prompt("Nhập doanh số bán hàng");
+        if( doanhSo >= 100) {
+            hoaHong = doanhSo*10/100;
+            document.write("Hoa hồng của bạn là" + hoaHong);
+        } else if (doanhSo >= 50) {
+            hoaHong = doanhSo*7/100;
+            document.write("Hoa hồng của bạn là" + hoaHong);
+        } else if ( doanhSo < 50 && doanhSo >=25) {
+            hoaHong = doanhSo*5/100;
+            document.write("Hoa hồng của bạn là" + hoaHong);
+        } else if (doanhSo < 25) {
+            document.write("Bạn không có hoa hồng")
+        }
+    </script> -->
+    Bài 7: Tính cước điện thoại cho một gia đình với các thông số đã cho
+    <script>
+         let phut = prompt('nhập số phút đã gọi: ');
+        let phiCD = 25000;
+        let phi;
+        if (phut <= 50) {
+            phi = phiCD + (phut*600);
+            document.write('Cước phí của bạn là:' + phi + ' VND');
+        } else if (phut <= 200) {
+            phi = phiCD + (50*600) + ((phut - 50)*400);
+            document.write('Cước phí của bạn là: ' + phi + ' VND');
+        }else if (phut > 200) {
+            phi = phiCD + (50*600) + (150*400) + ((phut-200)*200);
+            document.write('Cước phí của bạn là: ' + phi + ' VND');
+        }
+    </script>
+</body>
+</html>
